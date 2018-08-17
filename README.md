@@ -10,13 +10,10 @@ Container has latest release - 1.25.5 - of Ghost and is based on [`digiblink/nod
 
 To get it running just enter:
 
-`docker run -d \
---name=ghost-blog \
--p 3001:2368 \
-digiblink/ghost-armhf`
+`docker run -d --name=ghost-blog -p 3001:2368 digiblink/ghost-armhf`
 
 Then, access it via `http://localhost:3001` or `http://host-ip:3001` in a browser.
 
 If you want, you can customize your installation by modifying `config.production.json` file and mounting it before start of container by adding following switch to `docker` command between `--name` and `-p`:
 
-`-v $PWD/config.production.json:/var/www/ghost/config.production.json \`
+`-v $PWD/config.production.json:/var/www/ghost/config.production.json`

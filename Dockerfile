@@ -1,10 +1,10 @@
-FROM digiblink/nodejs8-armhf:1.0
+FROM digiblink/nodejs8-armhf:1.0.1
 
 USER root
 WORKDIR /var/www/
 RUN mkdir -p ghost
 RUN apt-get update && apt-get -qy install wget unzip && \
-    wget https://github.com/TryGhost/Ghost/releases/download/1.24.8/Ghost-1.24.8.zip && \
+    wget https://github.com/TryGhost/Ghost/releases/download/1.25.5/Ghost-1.25.5.zip && \
     unzip Ghost-*.zip -d ghost && \
     apt-get -y remove wget unzip && \
     apt-get -y autoremove && \
